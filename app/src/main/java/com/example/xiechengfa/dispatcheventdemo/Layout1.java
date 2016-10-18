@@ -31,11 +31,10 @@ public class Layout1 extends LinearLayout {
             case MotionEvent.ACTION_MOVE:
                  System.out.println("****************magic Layout1 dispatchTouchEvent ACTION_MOVE");
                   break;
-             case MotionEvent.ACTION_UP:
+            case MotionEvent.ACTION_UP:
                  System.out.println("****************magic Layout1 dispatchTouchEvent ACTION_UP");
                   break;
         }
-
         return super.dispatchTouchEvent(ev);
     }
 
@@ -52,6 +51,7 @@ public class Layout1 extends LinearLayout {
                 System.out.println("****************magic Layout1 onInterceptTouchEvent ACTION_UP");
                 break;
         }
+
         return super.onInterceptTouchEvent(ev);
     }
 

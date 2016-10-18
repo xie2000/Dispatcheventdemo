@@ -43,7 +43,7 @@ public class MyView extends TextView {
         switch (ev.getAction()){
             case MotionEvent.ACTION_DOWN:
                 System.out.println("****************magic MyView onTouchEvent ACTION_DOWN");
-                return false;
+                return true;
             case MotionEvent.ACTION_MOVE:
                 System.out.println("****************magic MyView onTouchEvent ACTION_MOVE");
                 break;
@@ -52,11 +52,7 @@ public class MyView extends TextView {
                 break;
         }
 
-        boolean res =super.onTouchEvent(ev);
-
-        System.out.println("*********************magic res:"+res);
-
-        return res;
+        return super.onTouchEvent(ev);
     }
 }
 
